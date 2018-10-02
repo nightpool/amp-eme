@@ -1,0 +1,13 @@
+<script>
+  let clearKeyOptions = [
+    {
+      audioCapabilities: [
+        { contentType: 'audio/webm; codecs="vorbis"' }
+      ]
+    }
+  ];
+
+  navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
+    .then(() => document.write('eme supported'))
+    .catch(() => document.write('eme request failed'));
+</script>
